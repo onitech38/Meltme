@@ -1,0 +1,201 @@
+/* Reset de estilos e variáveis globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Sans-Serif;
+  color: floralwhite;
+}
+.nota {
+  text-align: center;
+  font-size: .6rem;
+  padding-inline: 60px
+}
+:root {
+  /* Definição de variáveis de cor e outras variáveis globais */
+  --clr-mark-btn: linear-gradient(to right, coral, salmon);
+  --clr-mark-txt: coral;
+  --clr-mark-txt1: floralwhite;
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hamburger-gap: 6px;
+  --foreground: #333;
+  --background: floralwhite;
+  --hamburger-margin: 8px;
+  --animation-timing: 200ms ease-in-out;
+ }
+
+/* Estilos para o corpo da página */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: 
+    linear-gradient(to left, rgba(0,0,0,.1)10%, rgba(0,0,0,.75)),
+    linear-gradient(to bottom, rgba(0,0,0,.1)70%, rgba(0,0,0,.75)), 
+    url('../fotos/Bg1200x816px.png');
+  background-size: cover;
+  background-position: center;
+}
+.scale{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Estilos para elementos de formulário */
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid salmon;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.5s ease, height 0.2s ease;
+}
+
+.wrapper.active {
+  height: 520px;
+}
+
+.wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+}
+
+.wrapper .form-box.login {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+  position: absolute;
+  transform: translateX(0);
+  transition: transform 0.18s ease;
+}
+
+/* Estilos para caixas de entrada */
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid var(--clr-mark-txt);
+  margin: 30px 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: var(--clr-mark-txt);
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: wheat;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: var(--clr-mark-txt1);
+  line-height: 57px;
+}
+
+/* Outros estilos */
+.remember-forgot {
+  font-size: 0.9em;
+  color: floralwhite;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forgot label input {
+  accent-color: wheat;
+  margin-right: 3px;
+}
+
+.remember-forgot a {
+  color: wheat;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: var(--clr-mark-btn);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+
+.login-register {
+  font-size: 0.9em;
+  color: var(--clr-mark-txt);
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+
+.login-register p a {
+  color: var(--clr-mark-btn);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-register p a:hover {
+  text-decoration: underline;
+}
+p{
+  padding: 20px;
+}
