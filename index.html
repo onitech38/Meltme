@@ -30,57 +30,180 @@
 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer
     " />
-    
-    <!-- <script type="speculationrules">
-        {
-            "prerender": [{"url": ["/"]}]
-        }
-    </script> -->
 </head>
 <body>
     <header>
         <nav>
             <div class="nav_left" >
-                <a href="index.html" class="logo" style="height: 5em;"><img src="src/Logo_vrt_nBG-website.svg" alt="meltme logo"></a>
+                <a href="index.html" class="logo" style="height: 5em;" aria-label="meltme logo"><img src="src/Logo_vrt_nBG-website.svg" alt="meltme logo"></a>
                 <div class="nav_links">
-                    <a href="#">
-                        O que temos <span class="fas fa-angle-down"></span>
-                    </a>
-                    <a href="#products">Sobre nós</a>
-                    <a href="#">Ajuda <span class="fas fa-angle-down"></span></a>
+                   <button class="link-btn jobs" popovertarget="nav_products" aria-label="Produtos e serviços">O que temos <span class="fas fa-angle-down"></span></button>
+                    <div popover id="nav_products" class="nav_products">
+                        <div class="exclusivo">
+                            <h5 class="eyebrow">Edições Exclusivas</h5>
+                            <ul>
+                                <li><a class="btn link-btn" href="#">EXCLUSIVOS - 2024</a></li>
+                                <li><a class="btn link-btn" href="#">DIA DOS NAMORADOS</a></li>
+                                <li><a class="btn link-btn" href="#">DIA DA MULHER</a></li>
+                                <li><a class="btn link-btn" href="#">DIA DO PAI</a></li>
+                                <li><a class="btn link-btn" href="#">DIA DA MÃE</a></li>
+                                <li><a class="btn link-btn" href="#">DIA DOS AVÓS</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="trabalhos">
+                            <h5 class="eyebrow">Trabalhamos com...</h5>
+                          
+                          <div class="flex">
+                            <ul>
+                              <h6>VELAS 100% VEGAN</h6>
+                              <li><a class="btn link-btn" href="#">RECIPIENTES DE JESMONITE</a></li>
+                              <li><a class="btn link-btn" href="#">RECIPIENTES REUTILIZAVEIS</a></li>
+                              <li>
+                                <ul class="nota">
+                                  <li><p class="p-small">PEQUENOS</p></li>
+                                  <li><p class="p-small">MÉDIOS</p></li>
+                                  <li><p class="p-small">GRANDES</p></li>
+                                  </li>
+                                </ul>
+                                <a class="exemplo-frasc" href="#"><!--apenas com log-in-->
+                                  <h6>Descontos</h6>
+                                  <img src="https://bing.com/th/id/BCO.ddb1070a-c0be-45e7-b267-74b347b48e3c.png" alt="">
+                                  
+                                  <!--prompt no copiloto para a imagem
+
+                                  cria uma imagem com um conjunto de frascos com velas: -3franscos(cor branco tamanho grande,cor de champanhe tamanho pequeno,cor preto tamanho médio); -3frascos em jesmonite(cor branco e cor de salmão tamanho grande,cor de champanhe e cor branco tamanho pequeno,cor preto e cor de salmão tamanho médio);-->
+                                  
+                                  
+                                </a><!--exemplo de frascos nos seus 3 tamanhos(jesmo e os outros)-->
+                              </li>
+                            </ul>
+
+                            <ul>
+                              <h6>CERA DE SOJA</h6>
+                              <li><a class="btn link-btn" href="#">WAX MELT'S</a></li>
+                              <li><a class="btn link-btn" href="#">BUBBLE'S</a></li>
+                              <li><a class="btn link-btn" href="#">WAX BAR'S</a></li>
+                              <li><a class="btn link-btn" href="#">HEARTH'S</a></li>
+                            </ul>                            
+                          </div>
+
+                        </div>
+
+                        <div class="link_personalizar">
+                            <h3>Criando momentos únicos</h3>
+                            <p class="p-small" >Personaliza a tua vela ou o teu cabaz com os nosso artigos</p>
+                            <button>COMEÇAR</button>
+                        </div>
+                    </div>
+
+                    <a class="btn link-btn" href="#sobre">Sobre nós</a>
+    
+                    <button popovertarget="nav_fqa" class="link-btn fqa">Ajuda <span class="fas fa-angle-down"></span></button>
+                    <div popover id="nav_fqa" class="nav_fqa">
+                        <ul>
+                            <h5 class="eyebrow">contactos</h5>
+                            <li>
+                                <a class="btn link-btn" href="#">MENSAGEM WHATSAPP</a>
+                            </li>
+                            <li>
+                                <a class="btn link-btn" href="#">MENSAGEM DIRETA INSTAGRAM</a>
+                            </li>
+                            <li>
+                                <a class="btn link-btn" href="#">MENSAGEM DIRETA FACEBOOK</a>
+                            </li>
+                            <li>
+                                <a class="btn link-btn" href="#">E-MAIL</a>
+                            </li>
+                            <li>
+                                <a class="btn link-btn" href="#fqa">FAQ'S'</a>                        
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
             </div>
+          
             <div class="nav_right">
                 <ul class="icons" style="height: 1em;">
                     <li>
-                        <a class="icon_instagram" href="https://www.instagram.com/meltme_velasartesanais/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+                        <a class="icon_instagram link-btn" href="https://www.instagram.com/meltme_velasartesanais/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
                     </li>
                     <li>
-                        <a class="icon_facebook" href="#facebook" target="_blank"><span class="fa-brands fa-square-facebook"></span></a>
+                        <a  class="icon_facebook link-btn" href="#facebook" target="_blank"><span class="fa-brands fa-square-facebook"></span></a>
                     </li>
                     <li>
-                        <button class="hamburger"  onclick="openSidebar()"><span class="fa-solid fa-bars"></span></button>
-                        <button class="close_hamburger" onclick="closeSidebar()" style="display: none;"><span class="fa-solid fa-xmark"></span></button>
+                      <button class="hamburger sideNav"  popovertarget="nav_sidebar">
+                          <span class="hamburger-icon fa-solid fa-bars"></span>
+                          <span class="close-icon fa-solid fa-xmark"></span>
+                      </button>
                     </li>
                 </ul>
-            </div>
-            
+            </div>            
         </nav>
 
-        <div class="nav_sidebar">
+        <div class="nav_sidebar" id="nav_sidebar" popover>
             <div class="nav_links-sidebar">
-                <a href="#">
-                    O que temos<span class="fas fa-angle-down"></span>
-                </a>
-                <a href="#products">Sobre nós</a>
-                <a href="#">Ajuda<span class="fas fa-angle-down"></span></a>
+                <button class="link-btn jobs side" popovertarget="nav_products" aria-label="Produtos e serviços">O que temos <span class="fas fa-angle-down"></span></button>
+                <div popover id="nav_products" class="nav_products">
+                    <div class="exclusivo">
+                            <h5 class="eyebrow">Edições Exclusivas</h5>
+                            <ul>
+                                <li><a class="btn link-btn" href="#">EXCLUSIVOS - 2024</a></li>
+                                <li><a class="btn link-btn" href="#">DIA DOS NAMORADOS</a></li>
+                                <li><a class="btn link-btn" href="#">DIA DA MULHER</a></li>
+                                <li><a class="btn link-btn" href="#">DIA DO PAI</a></li>
+                                <li><a class="btn link-btn" href="#">DIA DA MÃE</a></li>
+                                <li><a class="btn link-btn" href="#">DIA DOS AVÓS</a></li>
+                            </ul>
+                    </div>
+
+                    <div class="trabalhos">
+                        <h5 class="eyebrow">Trabalhamos com...</h5>
+                        
+                        <div class="flex">
+                        <ul>
+                            <h6>VELAS 100% VEGAN</h6>
+                            <li><a class="btn link-btn" href="#">RECIPIENTES DE JESMONITE</a></li>
+                            <li><a class="btn link-btn" href="#">RECIPIENTES REUTILIZAVEIS</a></li>
+                            <li>
+                            <ul class="nota">
+                                <li><p class="p-small">PEQUENOS</p></li>
+                                <li><p class="p-small">MÉDIOS</p></li>
+                                <li><p class="p-small">GRANDES</p></li>
+                            </ul>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <h6>CERA DE SOJA</h6>
+                            <li><a class="btn link-btn" href="#">WAX MELT'S</a></li>
+                            <li><a class="btn link-btn" href="#">BUBBLE'S</a></li>
+                            <li><a class="btn link-btn" href="#">WAX BAR'S</a></li>
+                            <li><a class="btn link-btn" href="#">HEARTH'S</a></li>
+                        </ul>                            
+                        </div>
+
+                    </div>
+
+                    <div class="link_personalizar">
+                        <h3>Criando momentos únicos</h3>
+                        <p class="p-small" >Personaliza a tua vela ou o teu cabaz com os nosso artigos</p>
+                        <button>COMEÇAR</button>
+                    </div>
+                </div>
+
+              <a class="btn link-btn" href="#sobre">Sobre nós</a>
+              <button popovertarget="nav_fqa" class="link-btn fqa" aria-label="Ajuda">Ajuda <span class="fas fa-angle-down"></span></button>
             </div>
         </div>
 
@@ -127,7 +250,7 @@
                         <br>Uma vela Meltme ilumina um espaço, acendendo uma experiência plena de sentidos e recordações. Cada vela cria uma harmonia com a natureza, proporcionando momentos de serenidade e beleza.
                     </p>
                     <div class="btn-group" style="margin-top: 2rem;">
-                        <button><a href="html/Melt_products.html" target="_blank">Reunir itens</a></button>
+                        <a class="btn" href="html/Melt_products.html" target="_blank">Reunir itens</a>
                     </div>
                 </div>
             </div>
@@ -150,7 +273,7 @@
             </div>
         </section>
 
-        <section class="content-grid sobre">
+        <section id="sobre" class="content-grid sobre">
             <div class="header">
                 <div class="eyebrow">Criado com carinho</div>
                 <h3>Cria momentos de paz</h3>        
@@ -161,15 +284,15 @@
                     <div class="icon">
                         <i class='fas fa-sync' style='font-size:48px;'></i>                        
                     </div>
-                    <h5 class="eyebrow">Ecológico e elegante</h3>
-                    <p>Our candles are more than just light; they're a statement of sustainability and style.</p>
+                    <h5 class="eyebrow">Ecológico e elegante</h5>
+                    <p>As nossas velas são mais do que apenas luz; são uma afirmação de sustentabilidade e estilo.</p>
                 </div>
 
                 <div>
                     <div class="icon">
                         <i class='fas fa-mortar-pestle' style='font-size:48px;'></i>
                     </div>
-                    <h5 class="eyebrow">Tudo personalizável</h3>
+                    <h5 class="eyebrow">Tudo personalizável</h5>
                     <p>Escolhe o frasco, a cor, e a fragrância que tornará esta vela única.</p>
                 </div>
 
@@ -177,7 +300,7 @@
                     <div class="icon">
                         <i class='far fa-hourglass' style='font-size:48px;'></i>
                     </div>
-                    <h5 class="eyebrow">Um luxo sustentável</h3>
+                    <h5 class="eyebrow">Um luxo sustentável</h5>
                     <p>A cera de soja dura 2x mais que a parafina. Não é tóxica, e a fragrância dura mais tempo e é biodegradável.</p>
                 </div>
 
@@ -193,7 +316,7 @@
                     <div class="icon">
                         <i class='far fa-heart' style='font-size:48px;'></i>
                     </div>
-                    <h5 class="eyebrow">Feito com amor</h3>
+                    <h5 class="eyebrow">Feito com amor</h5>
                     <p>Cada vela é feitas com carinho e compromisso com o meio ambiente. Utilizamos cera 100% vegetal. </p>
                 </div>
 
@@ -201,7 +324,7 @@
                     <div class="icon">
                         <i class='fas fa-seedling' style='font-size:48px'></i>
                     </div>
-                    <h5 class="eyebrow">Fragrance your way</h3>
+                    <h5 class="eyebrow">Fragrance your way</h5>
                     <p>Cada vela é única na sua essência, pura, livre de substâncias tóxicas e prejudiciais.</p>
                 </div>
             </div>
@@ -362,7 +485,7 @@
             </div>
         </section>
 
-        <section class="content-grid fqa">
+        <section id="fqa" class="content-grid fqa">
             <h3>Sabias que...</h3>
 
             <details name="faq">
@@ -445,7 +568,6 @@
                 </li>
             </ul>
         </div>
-        <!-- Your footer content goes here -->
     </footer>
 
     <script src="script.js"></script>
