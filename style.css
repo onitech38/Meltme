@@ -279,7 +279,6 @@
   }
 }
 
-
 /*----AREA----*/
 
 section, footer {
@@ -415,8 +414,12 @@ header nav {
         text-wrap:nowrap;
       }
       
-      a:hover {
-        color: var(--clr_fnt-mid)
+      .btn{
+        border-radius: var(--border-radius);
+        transition: all var(--tempo);
+        :hover {
+          border-radius: var(--border-radius);
+        }
       }
       h6, .eyebrow {        
         text-align:start;        
@@ -492,7 +495,7 @@ header nav {
         }        
       }
       
-      & .link_personalizar {
+      .link_personalizar {
         width:clamp(20rem,10vw,30rem);
         max-width: 360px;
         border-radius: var(--border-radius);
@@ -506,12 +509,12 @@ header nav {
         justify-content: center;
         align-items: center;
         
-        & * {        
+        * {        
         text-align:start;        
         color:var(--clr_fnt-light);
         }
         
-        & h3, p {
+        h3, p {
           text-align: start;
         }
       }
@@ -519,11 +522,7 @@ header nav {
         opacity: 1;
         visibility: visible;
         display:flex;
-      }
-      &::backdrop {
-        background-color: rgba(0,0,0,0.3);
-        opacity:1;
-      }
+      }      
     }
     .nav_fqa {
       border:none;
@@ -756,6 +755,62 @@ header nav {
   }  
 }
 
+footer {
+  display:grid;
+  gap:2rem;
+  grid-template-areas:
+    "links links links logo"
+    "contacts contacts contacts logo"
+    "copyright copyright copyright copyright";
+
+
+  background: var(--clr-1);
+  color: var(--clr_fnt-light);
+  text-align: center;
+  border: var(--border-size);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  font-size: 0.8rem;
+  
+  place-items: center;
+  text-align: center;
+  
+  * {
+    color: var(--clr_fnt-mid);
+  }
+
+  .footer_links-content {
+    grid-area: links;
+    height: 2rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;    
+  }
+
+  .footer_contactos {
+    grid-area: contacts;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .brand {
+    height: 100%;
+    grid-area: logo;
+    
+    img {
+      object-fit: fill;
+    }
+  }
+  .copyright {
+    border-top: var(--border-size);
+    grid-area: copyright;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+  }
+}
 
 @layer responsive {
   @media screen and (width < 576px) { 
@@ -785,5 +840,3 @@ header nav {
     nav .hamburger {display: none !important;} 
   }
 }
-
-
