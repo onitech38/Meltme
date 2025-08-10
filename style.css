@@ -763,7 +763,6 @@ footer {
     "contacts contacts contacts logo"
     "copyright copyright copyright copyright";
 
-
   background: var(--clr-1);
   color: var(--clr_fnt-light);
   text-align: center;
@@ -777,6 +776,10 @@ footer {
   
   * {
     color: var(--clr_fnt-mid);
+    width: 100%;
+    place-items: center;
+    
+  text-align: center;
   }
 
   .footer_links-content {
@@ -784,16 +787,25 @@ footer {
     height: 2rem;
     display: flex;
     gap: 2rem;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;
+    text-wrap: nowrap;
+    *{
+      padding-block: .5rem;
+      text-align: center;
+    }
   }
 
   .footer_contactos {
     grid-area: contacts;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+
+    *{
+      font-size: 3rem;
+    }
   }
 
   .brand {
@@ -829,14 +841,29 @@ footer {
       }
       
     }
+    footer {
+      grid-template-areas:
+        "links links links links"
+        "contacts contacts contacts contacts"
+        "logo logo logo logo"
+        "copyright copyright copyright copyright";
+    }
   }
   @media screen and (min-width: 576px) and (max-width: 991px) {
     nav .nav_links {display: flex !important;}
     nav .hamburger {display: none !important;}
     
+    footer {
+      grid-template-areas:
+        "links links links links"
+        "contacts contacts contacts logo"
+        "copyright copyright copyright copyright";
+    }
   }
   @media screen and (width > 992px) { 
     nav .nav_links {display: flex !important;}
     nav .hamburger {display: none !important;} 
   }
 }
+
+
